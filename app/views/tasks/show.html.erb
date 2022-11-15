@@ -1,0 +1,11 @@
+<h2>find.html.erb</h2>
+<%= @task.title %>
+<%= @task.details %>
+<%= @task.completed %>
+
+<h1><%= link_to('zurück', tasks_path) %></h1>
+
+<h1><%= link_to "Delete",
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%></h1>
